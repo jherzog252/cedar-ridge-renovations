@@ -1,0 +1,19 @@
+
+# macOS
+.DS_Store
+
+# Editor settings
+.vscode/
+.cursor/
+
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.log
+*.tmp
