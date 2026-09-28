@@ -54,3 +54,32 @@ desktopQuery.addEventListener("change", (event) => {
     setMenuState(false);
   }
 });
+
+// Back to top
+
+const backToTopButton = document.querySelector(".back-to-top");
+
+if (backToTopButton) {
+  const toggleBackToTop = () => {
+    if (window.scrollY > 600) {
+      backToTopButton.classList.add("is-visible");
+    } else {
+      backToTopButton.classList.remove("is-visible");
+    }
+  };
+
+  window.addEventListener("scroll", toggleBackToTop);
+
+  backToTopButton.addEventListener("click", () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  });
+
+  toggleBackToTop();
+}
