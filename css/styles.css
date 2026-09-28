@@ -1067,3 +1067,132 @@
     }
   
   }
+
+  /* ------------------------------
+   Process
+------------------------------ */
+
+.process {
+    padding-block: var(--space-4xl);
+    background: var(--color-background);
+  }
+  
+  .process-heading {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  
+    border-top: 1px solid rgba(36, 37, 34, 0.18);
+  }
+  
+  .process-step {
+    position: relative;
+  
+    min-width: 0;
+    padding: var(--space-lg) var(--space-lg) 0 0;
+  }
+  
+  .process-step:not(:last-child) {
+    border-right: 1px solid rgba(36, 37, 34, 0.18);
+    margin-right: var(--space-lg);
+  }
+  
+  .process-number {
+    display: block;
+  
+    margin-bottom: var(--space-xl);
+  
+    color: var(--color-accent);
+  
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  
+  .process-step h3 {
+    margin: 0;
+  
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(1.5rem, 2vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .process-step p {
+    margin: var(--space-sm) 0 0;
+  
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+  
+  /* Responsive Process */
+  
+  @media (max-width: 1000px) and (min-width: 801px) {
+  
+    .process-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 var(--space-xl);
+    }
+  
+    .process-step {
+      padding-block: var(--space-lg);
+      padding-right: 0;
+  
+      border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+    }
+  
+    .process-step:not(:last-child) {
+      margin-right: 0;
+      border-right: 0;
+    }
+  
+    .process-number {
+      margin-bottom: var(--space-md);
+    }
+  
+  }
+  
+  @media (max-width: 800px) {
+  
+    .process {
+      padding-block: var(--space-2xl);
+    }
+  
+    .process-heading {
+      margin-bottom: var(--space-xl);
+    }
+  
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .process-step {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+  
+      gap: 0 var(--space-sm);
+      padding-block: var(--space-lg);
+      padding-right: 0;
+  
+      border-bottom: 1px solid rgba(36, 37, 34, 0.18);
+    }
+  
+    .process-step:not(:last-child) {
+      margin-right: 0;
+      border-right: 0;
+    }
+  
+    .process-number {
+      grid-row: 1 / 3;
+  
+      margin: 5px 0 0;
+    }
+  
+    .process-step p {
+      grid-column: 2;
+    }
+  
+  }
