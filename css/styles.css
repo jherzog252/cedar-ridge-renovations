@@ -1196,3 +1196,149 @@
     }
   
   }
+
+  /* ------------------------------
+   Service Area
+------------------------------ */
+
+.service-area {
+    padding-block: var(--space-4xl);
+    background: var(--color-text);
+    color: var(--color-surface);
+  }
+  
+  .service-area-content {
+    max-width: 960px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  
+  .service-area .eyebrow {
+    color: var(--color-accent);
+  }
+  
+  .service-area h2 {
+    max-width: 800px;
+    margin: 0 auto;
+  
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+  
+  .service-area-intro {
+    max-width: 620px;
+    margin: var(--space-lg) auto 0;
+  
+    color: rgba(252, 251, 248, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  /*
+  .service-area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    gap: var(--space-sm) var(--space-lg);
+  
+    margin: var(--space-2xl) 0 0;
+    padding: var(--space-xl) 0;
+  
+    border-top: 1px solid rgba(252, 251, 248, 0.18);
+    border-bottom: 1px solid rgba(252, 251, 248, 0.18);
+  
+    list-style: none;
+  }
+  */
+  
+  
+  .service-area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    gap: var(--space-sm);
+  
+    margin: var(--space-2xl) 0 0;
+    padding: var(--space-xl) 0;
+  
+    border-top: 1px solid rgba(252, 251, 248, 0.18);
+    border-bottom: 1px solid rgba(252, 251, 248, 0.18);
+  
+    list-style: none;
+  }
+  
+  .service-area-list li {
+    padding: var(--space-xs) var(--space-md);
+  
+    border: 1px solid rgba(252, 251, 248, 0.18);
+  
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .service-area-note {
+    margin: var(--space-xl) 0 0;
+  
+    color: rgba(252, 251, 248, 0.68);
+    font-size: 0.95rem;
+  }
+  
+  .service-area-note a {
+    color: var(--color-surface);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-underline-offset: 4px;
+  }
+  
+  .service-area-note a:hover {
+    color: var(--color-accent);
+  }
+  
+  .service-area-note a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+  
+  .service-area-note span,
+    .service-area-note a {
+  display: block;
+    }
+
+    .service-area-note a {
+  width: fit-content;
+  margin: var(--space-xs) auto 0;
+    }
+  
+  /* Responsive Service Area */
+  
+  @media (max-width: 800px) {
+
+    .service-area {
+      padding-block: var(--space-2xl);
+    }
+  
+    .service-area h2 {
+      font-size: clamp(2.25rem, 10vw, 3.25rem);
+    }
+  
+    .service-area-list {
+      gap: var(--space-xs);
+      margin-top: var(--space-xl);
+      padding-block: var(--space-md);
+    }
+  
+    .service-area-list li {
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 0.9rem;
+    }
+  
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
