@@ -55,31 +55,12 @@ desktopQuery.addEventListener("change", (event) => {
   }
 });
 
-// Back to top
 
-const backToTopButton = document.querySelector(".back-to-top");
 
-if (backToTopButton) {
-  const toggleBackToTop = () => {
-    if (window.scrollY > 600) {
-      backToTopButton.classList.add("is-visible");
-    } else {
-      backToTopButton.classList.remove("is-visible");
-    }
-  };
+// Current year
 
-  window.addEventListener("scroll", toggleBackToTop);
+const currentYear = document.querySelector("#current-year");
 
-  backToTopButton.addEventListener("click", () => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    window.scrollTo({
-      top: 0,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-    });
-  });
-
-  toggleBackToTop();
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
 }
